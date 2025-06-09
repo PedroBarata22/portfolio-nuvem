@@ -8,60 +8,71 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
-    <h1>Portfólio Cloud</h1>
-    <nav>
-      <a href="#sobre" title="Sobre"><i class="fas fa-user"></i></a>
-      <a href="#projetos" title="Projetos"><i class="fas fa-code"></i></a>
-      <a href="#contacto" title="Contacto"><i class="fas fa-envelope"></i></a>
-      <button id="dark-mode-toggle" title="Alternar modo escuro"><i class="fas fa-moon"></i></button>
+    <h1>Meu Portfólio</h1>
+    <nav aria-label="Navegação principal">
+      <button id="menu-btn" aria-label="Abrir menu">☰ Menu</button>
+      <ul id="menu" class="hidden">
+        <li><a href="#sobre">Sobre Mim</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
     </nav>
+    <button id="dark-toggle" title="Modo Escuro">🌙</button>
   </header>
 
   <main>
-    <section id="sobre">
-      <h2>Sobre Mim</h2>
+    <section id="sobre" aria-labelledby="titulo-sobre">
+      <h2 id="titulo-sobre">Sobre Mim</h2>
       <div class="sobre-content">
-        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Foto do autor" class="foto-autor" />
-        <p>Sou estudante de Computação em Nuvem com foco em soluções modernas, acessíveis e eficientes para a web. Este portfólio é parte do meu percurso académico.</p>
+        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Foto do autor do portfólio" class="foto-autor" />
+        <p>Olá! Sou um estudante de Computação em Nuvem e este é o meu portfólio desenvolvido para o projeto da disciplina. Tenho interesse em desenvolvimento web, cloud e automação.</p>
       </div>
     </section>
 
-    <section id="projetos">
-      <h2>Projetos</h2>
-      <div class="carousel">
-        <button class="carousel-btn left" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
-        <div class="carousel-track">
-          <div class="card"><h3>API de Pets</h3><p>API REST com Node.js e MySQL, hospedada na cloud.</p></div>
-          <div class="card"><h3>App de Tarefas</h3><p>App com Firebase para organização pessoal.</p></div>
-          <div class="card"><h3>Site Portfólio</h3><p>Website responsivo hospedado no Netlify.</p></div>
-        </div>
-        <button class="carousel-btn right" aria-label="Seguinte"><i class="fas fa-chevron-right"></i></button>
+    <section id="projetos" aria-labelledby="titulo-projetos">
+      <h2 id="titulo-projetos">Projetos</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Calculadora Web</h3>
+          <p>Uma calculadora simples feita com HTML, CSS e JavaScript. Suporta operações básicas e possui design responsivo.</p>
+        </article>
+        <article class="card">
+          <h3>Website de Restaurante</h3>
+          <p>Site fictício com menu, horários e página de contacto. Utiliza flexbox e media queries para adaptação em dispositivos móveis.</p>
+        </article>
+        <article class="card">
+          <h3>Formulário Validado</h3>
+          <p>Formulário de contacto com validação em JavaScript e feedback visual para campos obrigatórios.</p>
+        </article>
+        <article class="card">
+          <h3>Portfólio em Cloud</h3>
+          <p>Este próprio site está alojado numa plataforma cloud (como GitHub Pages ou Netlify), demonstrando conhecimentos básicos de deployment.</p>
+        </article>
       </div>
     </section>
 
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <form onsubmit="enviarMensagem(); return false;">
-        <label for="nome">Nome</label>
-        <input type="text" id="nome" name="nome" required />
+    <section id="contacto" aria-labelledby="titulo-contacto">
+      <h2 id="titulo-contacto">Contacto</h2>
+      <form onsubmit="enviarMensagem(); return false;" aria-label="Formulário de contacto">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="O seu nome" required />
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="O seu email" required />
 
-        <label for="mensagem">Mensagem</label>
-        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva a sua mensagem..." required></textarea>
 
-        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        <button type="submit">Enviar</button>
       </form>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2024 Portfólio de Computação em Nuvem</p>
+    <p>&copy; 2024 Meu Portfólio — Projeto de Computação em Nuvem</p>
   </footer>
 
   <script src="script.js"></script>
