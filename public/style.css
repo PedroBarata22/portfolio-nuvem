@@ -74,12 +74,14 @@ nav {
   cursor: pointer;
 }
 
-/* Lista do menu */
 #menu {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 30px;
+  margin-left: auto;
+  align-items: center;
 }
+
 
 #menu li a {
   color: var(--text);
