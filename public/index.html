@@ -3,14 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio Simples</title>
+  <title>Portfólio | Computação em Nuvem</title>
   <link rel="stylesheet" href="/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header>
-    <h1>Meu Portfolio</h1>
-    <nav>
-      <button id="menu-btn">☰ Menu</button>
+    <h1>Meu Portfólio</h1>
+    <nav aria-label="Navegação principal">
+      <button id="menu-btn" aria-label="Abrir menu">☰ Menu</button>
       <ul id="menu" class="hidden">
         <li><a href="#sobre">Sobre Mim</a></li>
         <li><a href="#projetos">Projetos</a></li>
@@ -20,45 +23,48 @@
   </header>
 
   <main>
-    <section id="sobre">
-      <h2>Sobre Mim</h2>
-      <p>Olá! Sou um estudante de Computação em Nuvem e este é o meu portfolio simples para o projeto da disciplina.</p>
+    <section id="sobre" aria-labelledby="titulo-sobre">
+      <h2 id="titulo-sobre">Sobre Mim</h2>
+      <p>Olá! Sou um estudante de Computação em Nuvem e este é o meu portfólio simples para o projeto da disciplina.</p>
     </section>
 
-    <section id="projetos">
-      <h2>Projetos</h2>
+    <section id="projetos" aria-labelledby="titulo-projetos">
+      <h2 id="titulo-projetos">Projetos</h2>
       <div class="cards">
-        <div class="card">
+        <article class="card">
           <h3>Projeto 1</h3>
           <p>Descrição simples do projeto 1.</p>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <h3>Projeto 2</h3>
           <p>Descrição simples do projeto 2.</p>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <h3>Projeto 3</h3>
           <p>Descrição simples do projeto 3.</p>
-        </div>
+        </article>
       </div>
     </section>
 
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <form onsubmit="alert('Obrigado pelo contacto!'); return false;">
-        <label for="nome">Nome:</label><br />
-        <input type="text" id="nome" name="nome" required /><br />
-        <label for="email">Email:</label><br />
-        <input type="email" id="email" name="email" required /><br />
-        <label for="mensagem">Mensagem:</label><br />
-        <textarea id="mensagem" name="mensagem" required></textarea><br />
+    <section id="contacto" aria-labelledby="titulo-contacto">
+      <h2 id="titulo-contacto">Contacto</h2>
+      <form onsubmit="alert('Obrigado pelo contacto!'); return false;" aria-label="Formulário de contacto">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="O seu nome" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="O seu email" required />
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva a sua mensagem..." required></textarea>
+
         <button type="submit">Enviar</button>
       </form>
     </section>
   </main>
 
   <footer>
-    <p>© 2024 Meu Portfolio - Desenvolvido para projeto de Computação em Nuvem</p>
+    <p>&copy; 2024 Meu Portfólio — Projeto de Computação em Nuvem</p>
   </footer>
 
   <script src="/script.js"></script>
