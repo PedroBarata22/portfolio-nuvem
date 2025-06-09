@@ -36,6 +36,8 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 10;
 }
 
 header h1 {
@@ -45,8 +47,8 @@ header h1 {
 
 nav {
   display: flex;
-  gap: 20px;
   align-items: center;
+  position: relative;
 }
 
 #dark-toggle {
@@ -55,33 +57,70 @@ nav {
   font-size: 22px;
   cursor: pointer;
   color: var(--highlight);
+  margin-left: 20px;
 }
 
 #dark-toggle:hover {
   transform: scale(1.1);
 }
 
-nav ul {
+/* MENU HAMBURGUER */
+#menu-btn {
+  display: none;
+  font-size: 28px;
+  color: var(--highlight);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Lista do menu */
+#menu {
   list-style: none;
   display: flex;
   gap: 20px;
 }
 
-nav ul.hidden {
-  display: none;
-}
-
-nav ul li a {
+#menu li a {
   color: var(--text);
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
 }
 
-nav ul li a:hover {
-  color: var(--highlight);
+#menu li a:hover {
+  background: rgba(0, 0, 0, 0.05);
 }
 
+/* Responsive Menu */
+@media (max-width: 768px) {
+  #menu-btn {
+    display: block;
+  }
+
+  #menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--box);
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    margin-top: 10px;
+    width: max-content;
+  }
+
+  #menu.show {
+    display: flex;
+  }
+}
+
+/* Seções e conteúdo */
 main {
   margin-top: 30px;
 }
@@ -140,6 +179,7 @@ h2 {
   color: var(--highlight);
 }
 
+/* Formulário */
 form {
   max-width: 600px;
   background: var(--box);
@@ -188,91 +228,11 @@ form button:hover {
   background: #8a5f3b;
 }
 
+/* Rodapé */
 footer {
   text-align: center;
   padding: 20px;
   font-size: 14px;
   color: var(--text);
   border-top: 1px solid #ccc;
-}
-
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    background: var(--box);
-    position: absolute;
-    right: 20px;
-    top: 70px;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-
-  .cards {
-    flex-direction: column;
-  }
-
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .sobre-content {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  /* MENU HAMBÚRGUER CLEAN */
-.menu-btn {
-  background: none;
-  border: none;
-  font-size: 26px;
-  cursor: pointer;
-  color: var(--highlight);
-  display: none;
-}
-
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.menu li a {
-  color: var(--text);
-  text-decoration: none;
-  font-weight: bold;
-  padding: 5px 10px;
-  border-radius: 6px;
-  transition: background 0.2s ease;
-}
-
-.menu li a:hover {
-  background: rgba(0, 0, 0, 0.05);
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .menu-btn {
-    display: block;
-  }
-
-  .menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    right: 20px;
-    top: 70px;
-    background: var(--box);
-    padding: 10px 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-
-  .menu.show {
-    display: flex;
-  }
-
 }
