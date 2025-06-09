@@ -5,34 +5,36 @@
   box-sizing: border-box;
 }
 
-/* Cores e fontes */
+/* Estilo base */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #0a1f44;
-  color: #eee;
-  line-height: 1.6;
-  padding: 10px;
+  color: #f0f0f0;
+  line-height: 1.7;
+  padding: 20px;
 }
 
-/* Header */
+/* Cabeçalho */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #102b5e;
-  padding: 15px 20px;
-  border-radius: 5px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 header h1 {
-  font-size: 24px;
+  font-size: 28px;
   color: #ff9500;
 }
 
+/* Navegação */
 nav ul {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 
 nav ul.hidden {
@@ -42,61 +44,98 @@ nav ul.hidden {
 nav ul li a {
   color: #eee;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff9500;
 }
 
 #menu-btn {
   display: none;
-  background: transparent;
+  background: none;
   border: none;
-  font-size: 24px;
+  font-size: 28px;
   color: #ff9500;
   cursor: pointer;
 }
 
-/* Main */
+/* Conteúdo principal */
 main {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 /* Seções */
 section {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 h2 {
   color: #ff9500;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  border-bottom: 2px solid #ff9500;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
-/* Cards projetos */
+/* Cartões de projetos */
 .cards {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
 .card {
   background: #153273;
-  padding: 15px;
-  border-radius: 8px;
-  flex: 1 1 200px;
-  box-shadow: 0 0 5px #ff9500;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 250px;
+  box-shadow: 0 0 10px rgba(255, 149, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(255, 149, 0, 0.5);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #ffb84d;
 }
 
 /* Formulário */
+form {
+  max-width: 600px;
+  background: #112b50;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 149, 0, 0.2);
+}
+
 form label {
-  font-weight: bold;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
 }
 
 form input,
 form textarea {
   width: 100%;
-  padding: 8px;
-  margin: 5px 0 15px 0;
-  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 6px;
   border: none;
-  font-size: 14px;
+  font-size: 15px;
+  background-color: #1c3a6d;
+  color: #eee;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #bbb;
 }
 
 form button {
@@ -104,40 +143,49 @@ form button {
   border: none;
   color: #0a1f44;
   font-weight: bold;
-  padding: 10px 15px;
-  border-radius: 5px;
+  padding: 12px 20px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 form button:hover {
   background: #ffb84d;
 }
 
-/* Footer */
+/* Rodapé */
 footer {
   text-align: center;
-  padding: 15px;
+  padding: 20px;
   font-size: 14px;
-  color: #999;
+  color: #ccc;
+  border-top: 1px solid #1c3a6d;
 }
 
-/* Responsividade */
+/* Responsivo */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
     background: #102b5e;
     position: absolute;
     right: 20px;
-    top: 60px;
+    top: 70px;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   }
+
   #menu-btn {
     display: block;
   }
+
   .cards {
     flex-direction: column;
   }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 }
-
-
