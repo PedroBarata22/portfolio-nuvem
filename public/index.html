@@ -8,14 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
     <h1>Portfólio Cloud</h1>
     <nav>
-      <a href="#sobre">Sobre</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#sobre" title="Sobre"><i class="fas fa-user"></i></a>
+      <a href="#projetos" title="Projetos"><i class="fas fa-code"></i></a>
+      <a href="#contacto" title="Contacto"><i class="fas fa-envelope"></i></a>
+      <button id="dark-mode-toggle" title="Alternar modo escuro"><i class="fas fa-moon"></i></button>
     </nav>
   </header>
 
@@ -30,19 +32,14 @@
 
     <section id="projetos">
       <h2>Projetos</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>API de Pets</h3>
-          <p>API REST criada com Node.js, Express e MySQL, com funções CRUD e deploy em cloud.</p>
+      <div class="carousel">
+        <button class="carousel-btn left" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+        <div class="carousel-track">
+          <div class="card"><h3>API de Pets</h3><p>API REST com Node.js e MySQL, hospedada na cloud.</p></div>
+          <div class="card"><h3>App de Tarefas</h3><p>App com Firebase para organização pessoal.</p></div>
+          <div class="card"><h3>Site Portfólio</h3><p>Website responsivo hospedado no Netlify.</p></div>
         </div>
-        <div class="card">
-          <h3>App de Tarefas</h3>
-          <p>Aplicação web com autenticação e armazenamento em Firebase, para gestão de tarefas pessoais.</p>
-        </div>
-        <div class="card">
-          <h3>Site de Portfólio</h3>
-          <p>Website pessoal com layout responsivo e hospedado em Netlify. Desenvolvido com HTML e CSS moderno.</p>
-        </div>
+        <button class="carousel-btn right" aria-label="Seguinte"><i class="fas fa-chevron-right"></i></button>
       </div>
     </section>
 
@@ -58,7 +55,7 @@
         <label for="mensagem">Mensagem</label>
         <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
 
-        <button type="submit">Enviar</button>
+        <button type="submit"><i class="fas fa-paper-plane"></i></button>
       </form>
     </section>
   </main>
