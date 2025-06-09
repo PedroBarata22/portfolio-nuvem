@@ -4,15 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfólio | Computação em Nuvem</title>
-  <link rel="stylesheet" href="/style.css" />
+
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet" />
+
+  <!-- Estilo Moderno -->
+  <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-<div id="loader">
-  <div class="spinner"></div>
-</div>
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Cabeçalho -->
   <header>
     <h1>Meu Portfólio</h1>
     <nav aria-label="Navegação principal">
@@ -25,12 +32,17 @@
     </nav>
   </header>
 
+  <!-- Conteúdo Principal -->
   <main>
+    <!-- Seção Sobre Mim -->
     <section id="sobre" aria-labelledby="titulo-sobre">
       <h2 id="titulo-sobre">Sobre Mim</h2>
-      <p>Olá! Sou um estudante de Computação em Nuvem e este é o meu portfólio simples para o projeto da disciplina.</p>
+      <p>
+        Olá! Sou um estudante de Computação em Nuvem e este é o meu portfólio simples para o projeto da disciplina.
+      </p>
     </section>
 
+    <!-- Seção Projetos -->
     <section id="projetos" aria-labelledby="titulo-projetos">
       <h2 id="titulo-projetos">Projetos</h2>
       <div class="cards">
@@ -49,6 +61,7 @@
       </div>
     </section>
 
+    <!-- Seção Contacto -->
     <section id="contacto" aria-labelledby="titulo-contacto">
       <h2 id="titulo-contacto">Contacto</h2>
       <form onsubmit="alert('Obrigado pelo contacto!'); return false;" aria-label="Formulário de contacto">
@@ -66,10 +79,12 @@
     </section>
   </main>
 
+  <!-- Rodapé -->
   <footer>
     <p>&copy; 2024 Meu Portfólio — Projeto de Computação em Nuvem</p>
   </footer>
 
+  <!-- JavaScript -->
   <script src="/script.js"></script>
 </body>
 </html>
