@@ -4,22 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfólio | Computação em Nuvem</title>
-
-  <!-- Google Font -->
+  <link rel="stylesheet" href="/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet" />
-
-  <!-- Estilo Moderno -->
-  <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-  <!-- Loader -->
   <div id="loader">
     <div class="spinner"></div>
   </div>
 
-  <!-- Cabeçalho -->
   <header>
     <h1>Meu Portfólio</h1>
     <nav aria-label="Navegação principal">
@@ -32,36 +26,34 @@
     </nav>
   </header>
 
-  <!-- Conteúdo Principal -->
   <main>
-    <!-- Seção Sobre Mim -->
     <section id="sobre" aria-labelledby="titulo-sobre">
       <h2 id="titulo-sobre">Sobre Mim</h2>
-      <p>
-        Olá! Sou um estudante de Computação em Nuvem e este é o meu portfólio simples para o projeto da disciplina.
-      </p>
+      <p>Olá! Sou um estudante de Computação em Nuvem e este é o meu portfólio desenvolvido para o projeto da disciplina. Tenho interesse em desenvolvimento web, cloud e automação.</p>
     </section>
 
-    <!-- Seção Projetos -->
     <section id="projetos" aria-labelledby="titulo-projetos">
       <h2 id="titulo-projetos">Projetos</h2>
       <div class="cards">
         <article class="card">
-          <h3>Projeto 1</h3>
-          <p>Descrição simples do projeto 1.</p>
+          <h3>Calculadora Web</h3>
+          <p>Uma calculadora simples feita com HTML, CSS e JavaScript. Suporta operações básicas e possui design responsivo.</p>
         </article>
         <article class="card">
-          <h3>Projeto 2</h3>
-          <p>Descrição simples do projeto 2.</p>
+          <h3>Website de Restaurante</h3>
+          <p>Site fictício com menu, horários e página de contacto. Utiliza flexbox e media queries para adaptação em dispositivos móveis.</p>
         </article>
         <article class="card">
-          <h3>Projeto 3</h3>
-          <p>Descrição simples do projeto 3.</p>
+          <h3>Formulário Validado</h3>
+          <p>Formulário de contacto com validação em JavaScript e feedback visual para campos obrigatórios.</p>
+        </article>
+        <article class="card">
+          <h3>Portfólio em Cloud</h3>
+          <p>Este próprio site está alojado numa plataforma cloud (como GitHub Pages ou Netlify), demonstrando conhecimentos básicos de deployment.</p>
         </article>
       </div>
     </section>
 
-    <!-- Seção Contacto -->
     <section id="contacto" aria-labelledby="titulo-contacto">
       <h2 id="titulo-contacto">Contacto</h2>
       <form onsubmit="alert('Obrigado pelo contacto!'); return false;" aria-label="Formulário de contacto">
@@ -79,12 +71,10 @@
     </section>
   </main>
 
-  <!-- Rodapé -->
   <footer>
     <p>&copy; 2024 Meu Portfólio — Projeto de Computação em Nuvem</p>
   </footer>
 
-  <!-- JavaScript -->
   <script src="/script.js"></script>
 </body>
 </html>
