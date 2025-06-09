@@ -35,21 +35,67 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   position: relative;
   z-index: 10;
 }
 
 header h1 {
-  font-size: 28px;
-  color: var(--highlight);
+  margin-right: auto; /* força o h1 à esquerda */
 }
 
 nav {
   display: flex;
   align-items: center;
-  position: relative;
+  gap: 20px;
 }
+
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+#menu li a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+/* Botão mobile */
+#menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--primary, #38bdf8);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  #menu {
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    background: var(--box);
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: none; /* oculto por padrão */
+  }
+
+  #menu.show {
+    display: flex;
+  }
+
+  #menu-btn {
+    display: block;
+  }
+}
+
 
 #dark-toggle {
   background: none;
@@ -74,14 +120,12 @@ nav {
   cursor: pointer;
 }
 
+/* Lista do menu */
 #menu {
   list-style: none;
   display: flex;
   gap: 20px;
-  margin-left: auto;
-  align-items: center;
 }
-
 
 #menu li a {
   color: var(--text);
@@ -122,7 +166,7 @@ nav {
   }
 }
 
-/* Seções e conteúdo */
+/* SeÃ§Ãµes e conteÃºdo */
 main {
   margin-top: 30px;
 }
@@ -181,7 +225,7 @@ h2 {
   color: var(--highlight);
 }
 
-/* Formulário */
+/* FormulÃ¡rio */
 form {
   max-width: 600px;
   background: var(--box);
@@ -230,7 +274,7 @@ form button:hover {
   background: #8a5f3b;
 }
 
-/* Rodapé */
+/* RodapÃ©️ */
 footer {
   text-align: center;
   padding: 20px;
