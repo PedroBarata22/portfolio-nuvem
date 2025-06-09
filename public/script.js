@@ -1,36 +1,18 @@
 function enviarMensagem() {
-  alert('Mensagem enviada com sucesso!');
+  alert('Obrigado pelo contacto!');
 }
 
 // Dark mode toggle
-const darkBtn = document.getElementById('dark-mode-toggle');
-darkBtn.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-  const icon = darkBtn.querySelector('i');
-  icon.classList.toggle('fa-moon');
-  icon.classList.toggle('fa-sun');
+const darkToggle = document.getElementById('dark-toggle');
+darkToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  darkToggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
 });
 
-// Carrossel
-const track = document.querySelector('.carousel-track');
-const btnLeft = document.querySelector('.carousel-btn.left');
-const btnRight = document.querySelector('.carousel-btn.right');
+// Menu mobile toggle
+const menuBtn = document.getElementById('menu-btn');
+const menu = document.getElementById('menu');
 
-let currentIndex = 0;
-
-btnRight.addEventListener('click', () => {
-  const cards = document.querySelectorAll('.card');
-  const cardWidth = cards[0].offsetWidth + 20;
-  if (currentIndex < cards.length - 1) {
-    currentIndex++;
-    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-  }
-});
-
-btnLeft.addEventListener('click', () => {
-  const cardWidth = document.querySelector('.card').offsetWidth + 20;
-  if (currentIndex > 0) {
-    currentIndex--;
-    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-  }
+menuBtn.addEventListener('click', () => {
+  menu.classList.toggle('hidden');
 });
