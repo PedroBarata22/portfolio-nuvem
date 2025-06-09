@@ -9,7 +9,7 @@ darkToggle.addEventListener('click', () => {
   darkToggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
 });
 
-// Menu mobile toggle
+// Mobile menu toggle
 const menuBtn = document.getElementById('menu-btn');
 const menu = document.getElementById('menu');
 
