@@ -2,83 +2,61 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfólio Moderno | Multimédia & Cloud</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carolina e Pedro | Portfólio Criativo</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div id="loader">
-    <div class="spinner"></div>
-  </div>
+  <div class="fade-in" id="container">
+    <header>
+      <h1>Carolina e Pedro</h1>
+      <p>Multimédia & UI/UX Designer</p>
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#trabalhos">Trabalhos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
 
-  <header>
-    <h1>Portfólio Criativo</h1>
-    <nav aria-label="Navegação principal">
-      <button id="menu-btn" aria-label="Abrir menu">☰</button>
-      <ul id="menu" class="hidden">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section id="sobre">
+    <section id="sobre" class="fade-in-up">
       <h2>Sobre Mim</h2>
-      <div class="sobre-content">
-        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Foto do autor" class="foto-autor" />
-        <p>Sou apaixonada por design digital, experiências interativas e soluções em cloud computing. Este portfólio é uma vitrine da minha jornada criativa e tecnológica.</p>
+      <p>Olá! Sou a Rita, criadora de experiências visuais com impacto emocional. Adoro transformar ideias em designs funcionais, bonitos e memoráveis.</p>
+    </section>
+
+    <section id="trabalhos" class="fade-in-up delay">
+      <h2>Trabalhos Recentes</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Swap&Style</h3>
+          <p>App para troca de roupas com IA personalizada.</p>
+        </div>
+        <div class="card">
+          <h3>VibeMatch</h3>
+          <p>Plataforma de encontros com base em estados emocionais.</p>
+        </div>
+        <div class="card">
+          <h3>TerapiaOnline.pt</h3>
+          <p>Website com foco em usabilidade e KPIs de redes sociais.</p>
+        </div>
       </div>
     </section>
 
-    <section id="projetos">
-      <h2>Projetos em Destaque</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>App de Moda Sustentável</h3>
-          <p>Aplicação mobile com design UI/UX moderno, focada em troca de roupa e estilo personalizado com IA.</p>
-        </article>
-        <article class="card">
-          <h3>Website Interativo de Terapia</h3>
-          <p>Projeto desenvolvido com foco em acessibilidade e animações suaves, hospedado em cloud Azure.</p>
-        </article>
-        <article class="card">
-          <h3>Vídeo Motion - Espaço</h3>
-          <p>Animação em Blender com simulações físicas e narração, explorando o universo de forma educativa.</p>
-        </article>
-        <article class="card">
-          <h3>Portfólio em Cloud</h3>
-          <p>Este próprio site é hospedado numa plataforma cloud (Vercel), com código limpo e arquitetura escalável.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="contacto">
-      <h2>Fale Comigo</h2>
-      <form onsubmit="alert('Obrigada pelo contacto!'); return false;">
-        <label for="nome">Nome</label>
-        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Seu email" required />
-
-        <label for="mensagem">Mensagem</label>
-        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem aqui..." required></textarea>
-
+    <section id="contacto" class="fade-in-up delay-2">
+      <h2>Contacto</h2>
+      <form onsubmit="enviarMensagem(event)">
+        <input type="text" placeholder="Nome" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Mensagem..." required></textarea>
         <button type="submit">Enviar</button>
-        <p id="msg-feedback"></p>
+        <p id="feedback"></p>
       </form>
     </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 Pedro o Maior — Multimédia & Cloud</p>
-  </footer>
-
+    <footer>
+      <p>© 2025 Carolina e Pedro</p>
+    </footer>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
