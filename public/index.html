@@ -2,61 +2,71 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carolina e Pedro | Portfólio Criativo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio | Computação em Nuvem</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="fade-in" id="container">
-    <header>
-      <h1>Carolina e Pedro</h1>
-      <p>Multimédia & UI/UX Designer</p>
-      <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#trabalhos">Trabalhos</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-    </header>
+  <header>
+    <h1>Portfólio Cloud</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
 
-    <section id="sobre" class="fade-in-up">
+  <main>
+    <section id="sobre">
       <h2>Sobre Mim</h2>
-      <p>Olá! Sou a Rita, criadora de experiências visuais com impacto emocional. Adoro transformar ideias em designs funcionais, bonitos e memoráveis.</p>
+      <div class="sobre-content">
+        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Foto do autor" class="foto-autor" />
+        <p>Sou estudante de Computação em Nuvem com foco em soluções modernas, acessíveis e eficientes para a web. Este portfólio é parte do meu percurso académico.</p>
+      </div>
     </section>
 
-    <section id="trabalhos" class="fade-in-up delay">
-      <h2>Trabalhos Recentes</h2>
-      <div class="grid">
+    <section id="projetos">
+      <h2>Projetos</h2>
+      <div class="cards">
         <div class="card">
-          <h3>Swap&Style</h3>
-          <p>App para troca de roupas com IA personalizada.</p>
+          <h3>API de Pets</h3>
+          <p>API REST criada com Node.js, Express e MySQL, com funções CRUD e deploy em cloud.</p>
         </div>
         <div class="card">
-          <h3>VibeMatch</h3>
-          <p>Plataforma de encontros com base em estados emocionais.</p>
+          <h3>App de Tarefas</h3>
+          <p>Aplicação web com autenticação e armazenamento em Firebase, para gestão de tarefas pessoais.</p>
         </div>
         <div class="card">
-          <h3>TerapiaOnline.pt</h3>
-          <p>Website com foco em usabilidade e KPIs de redes sociais.</p>
+          <h3>Site de Portfólio</h3>
+          <p>Website pessoal com layout responsivo e hospedado em Netlify. Desenvolvido com HTML e CSS moderno.</p>
         </div>
       </div>
     </section>
 
-    <section id="contacto" class="fade-in-up delay-2">
+    <section id="contacto">
       <h2>Contacto</h2>
-      <form onsubmit="enviarMensagem(event)">
-        <input type="text" placeholder="Nome" required />
-        <input type="email" placeholder="Email" required />
-        <textarea placeholder="Mensagem..." required></textarea>
+      <form onsubmit="enviarMensagem(); return false;">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
         <button type="submit">Enviar</button>
-        <p id="feedback"></p>
       </form>
     </section>
+  </main>
 
-    <footer>
-      <p>© 2025 Carolina e Pedro</p>
-    </footer>
-  </div>
+  <footer>
+    <p>&copy; 2024 Portfólio de Computação em Nuvem</p>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
