@@ -40,7 +40,7 @@ header {
 }
 
 header h1 {
-  margin-right: auto; /* força o h1 à esquerda */
+  margin-right: auto; 
 }
 
 nav {
@@ -166,7 +166,7 @@ nav {
   }
 }
 
-/* SeÃ§Ãµes e conteÃºdo */
+
 main {
   margin-top: 30px;
 }
@@ -225,7 +225,7 @@ h2 {
   color: var(--highlight);
 }
 
-/* FormulÃ¡rio */
+/* Formulario */
 form {
   max-width: 600px;
   background: var(--box);
@@ -274,7 +274,7 @@ form button:hover {
   background: #8a5f3b;
 }
 
-/* RodapÃ©️ */
+/* Rodape */
 footer {
   text-align: center;
   padding: 20px;
